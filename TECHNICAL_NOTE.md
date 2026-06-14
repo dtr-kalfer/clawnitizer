@@ -59,6 +59,6 @@ $$\text{Tokens} \approx \left\lceil \frac{\text{UTF-8 Character Length}}{4} \rig
 
 When managing a environment where the editing interface is running locally (e.g., Windows 10 utilizing WAMP/XAMPP) but the agent daemon is living on a separate architecture (e.g., a Linux staging server), developers must keep the following synchronization behaviors in mind:
 
-* **File Ownership & Locking:** Always ensure the script has proper read/write permissions for local assets.
-* **Atomic Transactions:** Because Clawnitizer completely overwrites the target file using `file_p
+* * **File Ownership & Locking:** Always ensure the script has proper read/write permissions for local assets. 
+* **Atomic Transactions:** Because Clawnitizer completely overwrites the target file using `file_put_contents()`, it is highly vulnerable to race conditions if an active agent stream writes a turn *while* a human is midway through an editing pass in the browser. Always isolate the session file snapshot during optimization passes.
 

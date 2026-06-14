@@ -1,4 +1,8 @@
 <?php
+	/* This file is part of a copyrighted work; 
+	it is distributed with NO WARRANTY. 
+	See LICENSE - Ferdinand Tumulak */
+
 // Configuration
 $json_file = 'session.jsonl';
 $status_message = '';
