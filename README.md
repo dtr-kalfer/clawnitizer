@@ -52,7 +52,7 @@ Open your browser and navigate to `http://localhost/clawnitizer` to start cleani
 
 ### 4. Deploy It Back
 
-Once you click **Save Optimized JSONL**, copy your newly trimmed `session.json` file back into your agent's workspace directory, renaming it back to its original filename.
+Once you click **Save Optimized JSONL**, copy your newly trimmed `session.jsonl` file back into your agent's workspace directory. Don't forget to **rename** the file back to its **original filename**.
 
 > 💻 **Cross-Platform Tip:** If your agent runs on a remote Linux server while you edit on Windows 10, use a quick `scp` command, WinSCP, or an SFTP client to pull/push the session file between machines!
 
