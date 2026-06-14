@@ -16,7 +16,7 @@ Think of it as a quick "hack & clean" scratchpad for your agent's memory. When b
 * **Emotions Run Wild:** Did you get frustrated and type, *"Why aren't you working?! GPT-4o would have figured this out by now!"* inside your prompt? Emotions waste tokens. Clean up your raw prompts so the agent stays focused.
 * **Less Garbage In, Less Garbage Out (Hopefully):** Look at why your agent failed or wasted 20,000 tokens, manually delete the bad turns, tweak a prompt, and hit **Save** to re-run the experiment clean.
 
-> 💡 **Framework Note:** `picoclaw` saves sessions inside the `.picoclaw/workspace/sessions/` path, named exactly after your API key (e.g., `secret-API-key.json`). The session file uses the **JSON Lines (JSONL)** format, which is the strict standard architecture used by OpenAI, Anthropic, and Mistral APIs for `user`, `assistant`, and `tool` tracing. OpenClaw stores its session files in the following directory:~/.openclaw/agents/agentId/sessions/. OpenClaw stores its data in the exact same format as PicoClaw. Always make a backup copy of both your .json & .jsonl file!
+> 💡 **Framework Note:** `picoclaw` saves sessions inside the `.picoclaw/workspace/sessions/` path, named exactly after your API key (e.g., `secret-API-key.jsonl`). The session file uses the **JSON Lines (JSONL)** format, which is the strict standard architecture used by OpenAI, Anthropic, and Mistral APIs for `user`, `assistant`, and `tool` tracing. OpenClaw stores its session files in the following directory:~/.openclaw/agents/agentId/sessions/. OpenClaw stores its data in the exact same format as PicoClaw. Always make a backup copy of both your meta.json & .jsonl file!
 
 
 ---
@@ -66,6 +66,9 @@ Once you click **Save Optimized JSONL**, copy your newly trimmed `session.jsonl`
     
 - 🔒 **Network Exposures:** This standalone script lacks embedded authentication or authorization checks. **Never expose this interface publicly onto shared host names or live production servers.** Keep its execution strictly limited to local loopback listeners (`localhost`, `127.0.0.1`).
     
+## 🚀 Credits
+
+- [Picoclaw](https://github.com/sipeed/picoclaw)
 
 ## 📄 License
 
